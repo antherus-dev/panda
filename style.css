@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./teste.png);
+}
+
+.container {
+    height: 31.25em;
+    width: 31.25em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+/* Contêiner do rosto do panda */
+.panda-face {
+    position: absolute;
+    top: -4em; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12em;
+    height: 12em;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    border: black 2px;
+}
+
+/* Orelhas */
+.ear-l, .ear-r {
+    background-color: #3f3554;
+    height: 2.5em;
+    width: 2.81em;
+    border: 0.18em solid #2e0d30;
+    border-radius: 2.5em 2.5em 0 0;
+    position: absolute;
+    top: -0.1em;
+    z-index: 0;
+}
+
+.ear-l {
+    transform: rotate(-38deg);
+    left: -0.4em;
+}
+
+.ear-r {
+    transform: rotate(38deg);
+    right: -0.4em;
+}
+
+/* Blush */
+.blush-l, .blush-r {
+    background-color: #ff8bb1;
+    height: 1em;
+    width: 1.37em;
+    border-radius: 50%;
+    position: absolute;
+    top: 8em;
+}
+
+.blush-l {
+    transform: rotate(25deg);
+    left: 1.5em;
+}
+
+.blush-r {
+    transform: rotate(-25deg);
+    right: 1.5em;
+}
+
+/* Olhos */
+.eye-l, .eye-r {
+    background-color: #3f3554;
+    height: 2.18em;
+    width: 2em;
+    border-radius: 2em;
+    position: absolute;
+    top: 4em;
+}
+
+.eye-l {
+    left: 1.8em;
+}
+
+.eye-r {
+    right: 1.8em;
+}
+
+.eyeball-l, .eyeball-r {
+    height: 0.6em;
+    width: 0.6em;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.6em;
+    left: 0.6em;
+    transition: transform 0.3s ease;
+}
+
+.nose {
+    height: 1em;
+    width: 1em;
+    background-color: #3f3554;
+    position: absolute;
+    top: 6em;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 1.2em 0 0 0.25em;
+}
+
+.nose::before {
+    content: "";
+    position: absolute;
+    background-color: #3f3554;
+    height: 0.6em;
+    width: 0.1em;
+    transform: rotate(-45deg);
+    top: 0.75em;
+    left: 1em;
+}
+
+.mouth {
+    height: 0.75em;
+    width: 0.93em;
+    background-color: transparent;
+    position: absolute;
+    top: 7em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0 0.18em #3f3554;
+}
+
+/* Mãozinhas do panda */
+.panda-hands {
+    position: absolute;
+    top: 4em; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 12em;
+}
+
+.hand-l, .hand-r {
+    background-color: #3f3554;
+    height: 2.8em;
+    width: 2.8em;
+    border-radius: 50%;
+    border: 0.18em solid #2e0d30;
+}
+
+.hand-l {
+    position: absolute;
+    left: -2em; 
+    top: 0;
+}
+
+.hand-r {
+    position: absolute;
+    right: -2em; 
+    top: 0;
+}
+
+/* Formulário */
+form {
+    width:  24rem;
+    height: 20rem;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 0 3.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5em;
+}
+
+form input:focus {
+    border-color: #f4c531;
+}
+
+form button {
+    font-size: 0.95em;
+    padding: 0.8em 0;
+    border-radius: 2em;
+    border: none;
+    background-color: #f4c531;
+    color: #2e0d30;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-top: 0.8em;
+    transition: 0.5s;
+}
+
+form input {
+    background-color: #f0f0f0; 
+    border: 1px solid #ddd;    
+    padding: 10px;             
+    border-radius: 0.5em;      
+    margin-bottom: 10px;       
+    font-size: 1em;            
+    width: 100%;    
+               
+}
+
+
+
+
+/* Olhos fechados com traço branco */
+.closed-eyes {
+    background-color: #3f3554; 
+    border-radius: 50%; 
+}
+
+.closed-eyes::before {
+    content: '';
+    position: absolute;
+    height: 0.2em; 
+    width: 1.5em;  
+    background-color: #ffffff;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.1em;
+}
+
+p {
+    font-weight: 750;
+    font-size: 1.15rem;
+    padding: 6px;
+    margin-top: 9px;
+
+}
